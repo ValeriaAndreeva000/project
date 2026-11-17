@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Платформер — Мой проект</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ШАПКА -->
+    <header>
+        <h1>🎮 Платформер</h1>
+        <p>Итоговый проект ученицы 9 класса</p>
+        <p class="subtitle">Профессия: программист</p>
+        <button id="themeBtn">🌙 Сменить тему</button>
+    </header>
+
+    <!-- О ПРОЕКТЕ -->
+    <section id="about">
+        <h2>О проекте</h2>
+        <p>
+            Я создала игру-платформер на языке <strong>Python</strong> с использованием библиотеки <strong>Pygame</strong>.
+            В игре есть персонаж, платформы, монетки и финишный флаг.
+        </p>
+        <p>
+            Цель игры — собрать все монетки и добраться до финиша, прыгая по платформам.
+            Игра демонстрирует навыки программирования: работу с физикой, коллизиями, циклами и классами.
+        </p>
+    </section>
+
+    <!-- УПРАВЛЕНИЕ -->
+    <section id="controls">
+        <h2>Управление</h2>
+        <div class="controls-grid">
+            <div class="control-card">
+                <span class="key">A</span>
+                <span class="key">←</span>
+                <p>Влево</p>
+            </div>
+            <div class="control-card">
+                <span class="key">D</span>
+                <span class="key">→</span>
+                <p>Вправо</p>
+            </div>
+            <div class="control-card">
+                <span class="key">W</span>
+                <span class="key">Space</span>
+                <p>Прыжок</p>
+            </div>
+            <div class="control-card">
+                <span class="key">R</span>
+                <p>Перезапуск</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ЧТО В ИГРЕ -->
+    <section id="features">
+        <h2>Что есть в игре</h2>
+        <ul class="features-list">
+            <li>🏃 Персонаж, который бегает и прыгает</li>
+            <li>🟫 Платформы разных уровней</li>
+            <li>🪙 Монетки — собери все 5 штук</li>
+            <li>🏁 Финишный флаг — цель игры</li>
+            <li>💥 Физика: гравитация, прыжки, столкновения</li>
+        </ul>
+    </section>
+
+        <!-- СКРИНШОТЫ -->
+    <section id="screenshots">
+        <h2>Скриншоты игры</h2>
+        <div class="gallery">
+            <img src="screen1.png" alt="Скриншот 1">
+            <img src="screen2.png" alt="Скриншот 2">
+            <img src="screen3.png" alt="Скриншот 3">
+        </div>
+    </section>
+
+    <!-- КАК ЗАПУСТИТЬ -->
+    <section id="howto">
+        <h2>Как запустить игру</h2>
+        <ol>
+            <li>Установить Python с сайта <a href="https://python.org" target="_blank">python.org</a></li>
+            <li>Установить библиотеку Pygame командой <code>pip install pygame</code></li>
+            <li>Сохранить файл <code>platformer.py</code> и запустить его</li>
+            <li>Играть с помощью клавиш W, A, S, D</li>
+        </ol>
+    </section>
+
+    <!-- КОД -->
+    <section id="code">
+        <h2>Фрагмент кода</h2>
+        <pre><code>def create_level():
+    platforms = [
+        pygame.Rect(0, HEIGHT - 40, WIDTH, 40),  # земля
+        pygame.Rect(50, 450, 150, 20),
+        pygame.Rect(200, 350, 150, 20),
+        pygame.Rect(550, 250, 150, 20),
+    ]
+    coins = [Coin(100, 400), Coin(250, 300)]
+    finish = Finish(720, 0)
+    return platforms, coins, finish</code></pre>
+    </section>
+
+    <!-- ФУТЕР -->
+    <footer>
+        <p>© 2026. Проект по профориентации «Профессия программист»</p>
+        <p>Автор: Андреева Валерия</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
