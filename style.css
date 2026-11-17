@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+    line-height: 1.6;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* ШАПКА */
+header {
+    /* Ставим картинку на фон + накладываем темный фильтр, чтобы текст читался */
+    background-image: linear-gradient(rgba(30, 60, 114, 0.6), rgba(42, 82, 152, 0.6)), url('bg.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 20px; /* Сделал шапку повыше, чтобы картинка была видна */
+    text-align: center;
+}
+
+header h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+.subtitle {
+    font-size: 16px;
+    opacity: 0.7;
+    margin-bottom: 20px;
+}
+
+#themeBtn {
+    background: white;
+    color: #1e3c72;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#themeBtn:hover {
+    transform: scale(1.05);
+}
+
+/* СЕКЦИИ */
+section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: background 0.3s;
+}
+
+section h2 {
+    color: #1e3c72;
+    margin-bottom: 15px;
+    font-size: 28px;
+    border-bottom: 3px solid #2a5298;
+    padding-bottom: 8px;
+}
+
+section p {
+    margin-bottom: 12px;
+    font-size: 17px;
+}
+
+/* УПРАВЛЕНИЕ */
+.controls-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.control-card {
+    background: #eef1f5;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.key {
+    display: inline-block;
+    background: #1e3c72;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin: 3px;
+    font-size: 18px;
+}
+
+.control-card p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* СПИСОК */
+.features-list {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.features-list li {
+    padding: 10px 0;
+    font-size: 17px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Галерея со скриншотами */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: 280px; /* Фиксированная ширина для скриншота */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* Легкое увеличение при наведении мышки */
+}
+}
+
+.screenshot {
+    background: #dfe6ee;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: #666;
+    font-weight: bold;
+}
+
+.hint {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #888;
+    font-style: italic;
+}
+
+/* КОД */
+pre {
+    background: #1e1e1e;
+    color: #d4d4d4;
+    padding: 20px;
+    border-radius: 10px;
+    overflow-x: auto;
+    font-family: Consolas, monospace;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* ФУТЕР */
+footer {
+    background: #1e3c72;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 15px;
+}
+
+/* ССЫЛКИ */
+a {
+    color: #2a5298;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ТЁМНАЯ ТЕМА */
+body.dark {
+    background: #121212;
+    color: #eee;
+}
+
+body.dark section {
+    background: #1e1e1e;
+    color: #eee;
+}
+
+body.dark section h2 {
+    color: #64b5f6;
+    border-bottom-color: #64b5f6;
+}
+
+body.dark .control-card {
+    background: #2a2a2a;
+}
+
+body.dark .control-card p {
+    color: #eee;
+}
+
+body.dark .features-list li {
+    border-bottom-color: #333;
+}
+
+body.dark .screenshot {
+    background: #2a2a2a;
+    color: #aaa;
+}
+
+body.dark a {
+    color: #64b5f6;
+}
